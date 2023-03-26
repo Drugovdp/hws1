@@ -1,0 +1,81 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.imageAndText {
+    display: flex;
+    height: auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.imageAndText img {
+    width: 50px;
+    order: 1;
+}
+
+.text {
+    position: relative;
+    width: 50vw;
+    min-width: 320px;
+    background-color: #0066CC;
+    color: #FFFFFF;
+    border-radius: 20px 20px 0 20px;
+    box-shadow: 0 5px rgba(29, 33, 38, 0.03);
+}
+
+.text:after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #0066CC;
+    border-right: 20px solid transparent;
+}
+
+.name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (18 - 16) + 16px);
+    line-height: 22px;
+    padding: 10px;
+    text-align: right;
+}
+
+.messageText {
+    width: 99%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (16 - 14) + 14px);
+    line-height: 19px;
+    padding: 10px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.time {
+    width: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (12 - 10) + 12px);
+    line-height: 19px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .imageAndText {
+        gap: 10px;
+    }
+    .imageAndText img {
+        width: 40px;
+        order: 1;
+    }
+    .text {
+        min-width: 250px;
+    }
+}
